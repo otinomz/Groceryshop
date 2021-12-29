@@ -49,9 +49,15 @@ main > p {
 
 
 footer {
+  /* position: fixed;
+  bottom: 0; */
   position: fixed;
   bottom: 0;
-  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 90%;
   font-weight: bold;
   font-size: 20px;
 }

@@ -9,10 +9,5 @@ const Header = ({title}) => {
   );
 };
 
-// default Props paradventure one forgets
-//  to pass the title props
-Header.defaultProps = {
-  title: "Default Title" 
-}
 
 export default Header;

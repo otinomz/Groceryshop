@@ -18,13 +18,6 @@ function SearchItem({search, setSearch}) {
                 onChange={(e) => setSearch(e.target.value)}
 
             />
-
-            {/* <button
-                type="submit"
-                aria-label="Add Item"
-            >
-                <FaPlus/>
-            </button> */}
         </form>
     )
 }

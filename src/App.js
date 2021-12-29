@@ -8,13 +8,12 @@ import Footer from "./components/Footer";
 
 const App = () => {
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem(("shoppinglist"))));
+  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || []);
 
   // new defined state for controlled input
   const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
  
-
   const setAndSaveItems = ( newItems) => {
     setItems(newItems)
     localStorage.setItem('shoppinglist', JSON.stringify(newItems))
@@ -58,16 +57,13 @@ const App = () => {
         setNewItem={setNewItem}
         handleSubmit={handleSubmit}
       />
-      
       <SearchItem
         search={search}
         setSearch={setSearch}
       />
       
       <Content
-        items={
-          items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))
-        }
+        items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
         handleCheck={handleCheck}
         handleDelete={handleDelete}
       />
@@ -81,3 +77,5 @@ const App = () => {
 
 
 export default App;
+
+//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

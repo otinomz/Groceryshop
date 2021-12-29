@@ -16,7 +16,6 @@ function SearchItem({search, setSearch}) {
                 placeholder='Search Item'
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
-
             />
         </form>
     )

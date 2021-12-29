@@ -1,0 +1,192 @@
+*{
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  width: 100%;
+}
+
+.App {
+  text-align: center;
+  max-width: 100%;
+  font-family: 'Lato', sans-serif;
+  font-family: 'Montserrat', sans-serif;
+  font-family: 'Roboto', sans-serif;
+  
+}
+
+header,
+footer {
+  background: #6758ce;
+  color: aliceblue;
+  padding: 20px;
+  font-family: Montserrat;
+}
+
+header > h1{
+  font-size: 56px;
+}
+
+main {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-bottom: 100px;
+  font-family: Lato;
+  
+}
+
+main > p {
+  width: 50%;
+  margin: 20px auto;
+  color: rgba(128, 128, 128, 0.678);
+  letter-spacing: 0.1px;
+  font-weight: 700;
+}
+
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.list-items {
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: lavender;
+  margin: 20px;
+  border-radius: 5px;
+  width: 50%;
+  margin: 20px auto;
+  font-family: Montserrat;
+  font-weight: 500;
+}
+
+.list-input {
+  height: 30px;
+  width: 30px;
+  flex: 0.2;
+  cursor: pointer;
+}
+
+.list-text {
+  flex: 0.6;
+}
+
+.list-items[type="checkbox"]:focus + label{
+  text-decoration: underline;
+}
+
+.list-items svg {
+  width: 38px;
+  min-width: 38px;
+  height: 26px;
+  font-size: 1rem;
+  color: steelblue;
+  cursor: pointer;
+}
+
+.list-items svg:focus,
+.list-items svg:hover {
+  color: red;
+  outline: none;
+}
+
+ul li::before{
+  content: "\200B";
+}
+
+.addForm, .searchForm{
+  width: 70%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 0.8rem 0.5rem 0.25rem;
+  border-bottom: 1px solid #eee;
+  position: sticky;
+  top: 0;
+}
+
+.searchForm{
+  position: sticky;
+  top: 70px;
+  width: 40%;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.041);
+}
+
+.addForm label, .searchForm > label{
+  position: absolute;
+  left: -99999px;
+  overflow-x:hidden ;
+
+}
+
+.addForm > input , .searchForm > input {
+  flex-grow: 1;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem 1rem;
+  border-radius: 0.25rem;
+  margin-right: 1.25rem;
+  outline: none;
+  border: 1px solid #9b92da;
+  font-family: Montserrat;
+} 
+
+.searchForm > input{
+  border: 1px solid rgb(15, 129, 15);
+}
+
+button{
+  height: 48px;
+  min-width: 48px;
+  border-radius: 0.25rem;
+  border: 1px solid #9b92da;
+  padding: 0.5rem;
+  font-size: 1rem;
+  background-color: aliceblue;
+  color: mediumblue;
+  cursor: pointer;
+}
+
+button:focus,
+button:hover{
+  color: white;
+  background-color: limegreen;
+  outline: none;
+}
+
+@media (max-width: 768px) {
+  header > h1{
+    font-size: 36px;
+
+  }
+
+  main > p {
+    width: 90%;
+  }
+
+  .list-items {
+    width: 80%;
+  }
+
+  .list-items {
+    padding: 15px;
+  }
+
+  .searchForm{
+    width: 90%;
+    border-bottom: 1px solid rgba(238, 238, 238, 0.041);
+    margin-left: 20px;
+  }
+
+}

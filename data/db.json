@@ -29,6 +29,11 @@
       "id": 6,
       "checked": false,
       "item": "sugar is bad for your health"
+    },
+    {
+      "id": 7,
+      "checked": false,
+      "item": "oti"
     }
   ]
 }

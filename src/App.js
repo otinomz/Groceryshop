@@ -1,4 +1,4 @@
-import React, {useState} from "react"
+import React, {useState, useEffect} from "react"
 import "./index.css";
 import AddItem from "./components/AddItem";
 import Content from "./components/Content";
@@ -9,6 +9,10 @@ import Footer from "./components/Footer";
 const App = () => {
 
   const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || []);
+
+  useEffect(() => {
+    console.log("load time")
+  }, [])
 
   // new defined state for controlled input
   const [newItem, setNewItem] = useState('')
@@ -71,7 +75,7 @@ const App = () => {
       <Footer length={items.length} />
       
     </div>
-  );
+  ); 
 };
 
 

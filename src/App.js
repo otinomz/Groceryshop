@@ -8,16 +8,15 @@ import Footer from "./components/Footer";
 
 const App = () => {
 
-  const [items, setItems] = useState(JSON.parse(localStorage.getItem('shoppinglist')) || []);
-
-  useEffect(() => {
-    console.log("load time")
-  }, [])
-
-  // new defined state for controlled input
+  const [items, setItems] = useState([]);
   const [newItem, setNewItem] = useState('')
   const [search, setSearch] = useState('')
- 
+  
+  useEffect(() => {
+    setItems(JSON.parse(localStorage.getItem('shoppinglist')) || [])
+  }, [])
+
+
   const setAndSaveItems = ( newItems) => {
     setItems(newItems)
     localStorage.setItem('shoppinglist', JSON.stringify(newItems))

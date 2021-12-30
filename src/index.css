@@ -5,6 +5,8 @@
 
 body{
   width: 100%;
+  min-height: 100vh;
+  /* background: rgba(205, 223, 238, 0.233); */
 }
 
 .App {
@@ -36,7 +38,6 @@ main {
   overflow-y: auto;
   padding-bottom: 100px;
   font-family: Lato;
-  
 }
 
 main > p {
@@ -94,7 +95,7 @@ footer {
   min-width: 38px;
   height: 26px;
   font-size: 1rem;
-  color: steelblue;
+  color: #6758ce;
   cursor: pointer;
 }
 

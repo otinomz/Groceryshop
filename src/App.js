@@ -105,21 +105,21 @@ const App = () => {
       />    
 
       <main>
-        {isLoading && <p>Loading Items...</p>}
-        { fetchError && 
+        {/* {isLoading && <p>Loading Items...</p>} */}
+        {/* { fetchError && 
           <p style={{
           color: "red"
           }}>{`Error: ${fetchError}`}</p>
-        }
+        } */}
 
-        { !fetchError && !isLoading && (
+        {/* { !fetchError && !isLoading && ( */}
             <Content
               items={items.filter(item => ((item.item).toLowerCase()).includes(search.toLowerCase()))}
               handleCheck={handleCheck}
               handleDelete={handleDelete}
             />
-          )
-        }
+          {/* ) */}
+        {/* } */}
 
       </main>
 
